@@ -10,7 +10,7 @@ BienVenue is an app that aims to solve a common problem that touring and gigging
 
 ## Technologies Used
 
-HTML, CSS, JavaScript
+HTML, CSS, JavaScript, Bootstrap
 
 ## Getting Started
 
