@@ -23,7 +23,11 @@ Version 1.0
 - As a user, I want to be able to sign in on a login page to have my credentials verified.
 - As a user I want to be able to add a venue to the list.
 - As a user I want to be able to see a master list of venues that combines what I and other users have added.
-- As a user I want to be able to see newly added venues.
+- As a user I want to be able to see venue details.
+- As a user I want to be able to see some of the previous shows that have happened at the venue.
+- As a user who owns a venue I want to be able to create a show that has happened at the venue.
+- As a user who owns a venue I want to be able to update a show that has happened at the venue.
+- As a user who owns a venue I want to be able to delete a show that has happened at the venue.
 - As a user who owns a venue I want to be able to update venue information or delete it as the status of my establishment changes in real life.
 - As a user I want to be blocked from updating or deleting a venue unless I created it.
 
@@ -31,7 +35,6 @@ Version 2.0
 
 - As a user I want to be able to export the entire list of venues in a text file for easy access later.
 - As a user I want to be able to click the booker's contact information and contact them via the app.
-- As a user I want to be able to click the name of a venue and then be sent to an separate landing page with further information about the venue.
 - As a user I want to be able to see the amount of times a venue has been viewed.
 
 Version 3.0
