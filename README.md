@@ -4,7 +4,7 @@ BienVenue is an app that aims to solve a common problem that touring and gigging
 
 ## Screenshots
 
-![Login Page](./images/BienVenue%20App%20Login.jpg)
+![Login Page](./images/BienVenue%20Login%20Page.jpg)
 
 ![App Interface](./images/BienVenue%20App%20UI.jpg)
 
@@ -19,6 +19,7 @@ Bienvenue! To use the app click [here](https://google.com)
 ## Next Steps
 
 Version 1.0
+- As a user, I want to be able to create an account.
 - As a user, I want to be able to sign in on a login page to have my credentials verified.
 - As a user I want to be able to add a venue to the list.
 - As a user I want to be able to see a master list of venues that combines what I and other users have added.
