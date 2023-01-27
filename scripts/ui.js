@@ -1,3 +1,4 @@
+
 // VENUES
 
 const indexVenueContainer = document.querySelector('#index-venue-container')
@@ -11,7 +12,7 @@ export const onIndexVenueSuccess = (venues) => {
             <h3>${venue.name} - ${venue.location.city}, ${venue.location.stateOrProvince} (${venue.location.country})</h3>
             <button data-id="${venue._id}" >Show Venue</button>
         `
-
+        
         indexVenueContainer.appendChild(div)
     })
 }
@@ -70,8 +71,6 @@ export const onUpdateVenueSuccess = () => {
 export const onDeleteVenueSuccess = () => {
     characterMessageContainer.innerText = 'The venue has been deleted.'
 }
-
-
 
 // SHOWS
 

@@ -45,6 +45,8 @@ indexVenues()
 createVenueForm.addEventListener('submit', (event) => {
     event.preventDefault()
 
+    console.log(event.target['typeOfShowsBooked'].value)
+
     const venueData = {
 			venue: {
 				name: event.target['name'].value,
@@ -54,7 +56,7 @@ createVenueForm.addEventListener('submit', (event) => {
                     country: event.target['country'].value,
                 },
 				capacity: event.target['capacity'].value,
-				typeOfShowsBooked: event.target['type of shows booked'].value,
+				typeOfShowsBooked: event.target['typeOfShowsBooked'].value,
                 contact: {
                     name: event.target['contact name'].value,
                     email: event.target['contact email'].value,
@@ -151,7 +153,7 @@ createShowForm.addEventListener('submit', (event) => {
 
     const showData = {
 			show: {
-				artist: event.target['gig'].value,
+				artist: event.target['artist'].value,
                 year: event.target['year'].value,
 			},
 		}
