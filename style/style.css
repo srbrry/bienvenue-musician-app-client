@@ -19,12 +19,9 @@ input {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#sign-in {
-    
-}
-
-#create-account {
-
+#main-page {
+    display: inline-block;
+    visibility: hidden;
 }
 
 #an-app-text {

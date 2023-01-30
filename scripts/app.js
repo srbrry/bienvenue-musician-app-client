@@ -1,6 +1,6 @@
 import { 
 	indexVenues, 
-	indexShows,
+	// indexShows,
 	createVenue,
 	createShow,
 	showVenue,
@@ -38,24 +38,30 @@ const showVenueContainer = document.querySelector('#show-venue-container')
 
 const browseVenuesButton = document.querySelector('#browse-venues')
 
-const signInContainer = document.querySelector('#sign-in-form-container')
-const signUpContainer = document.querySelector('#sign-up-form-container')
+const signInForm = document.querySelector('#sign-in-form')
+const signUpForm = document.querySelector('#sign-up-form')
 
 // SIGN IN and UP button functionality
 
-signUpContainer.addEventListener('submit', (event) => {
+signUpForm.addEventListener('submit', (event) => {
 	event.preventDefault()
+    console.log("signUpForm")
+    console.log(event.target)
 	const userData = {
 		credentials: {
 			email: event.target['email'].value,
 			password: event.target['password'].value,
 		},
 	}
-	signUp(userData).then(onSignUpSuccess).catch(onSignUpFailure)
+	signUp(userData)
+        .then(onSignUpSuccess)
+        .catch(onSignUpFailure)
 })
 
-signInContainer.addEventListener('submit', (event) => {
+signInForm.addEventListener('submit', (event) => {
 	event.preventDefault()
+    console.log("sign in form")
+    console.log(event.target)
 	const userData = {
 		credentials: {
 			email: event.target['email'].value,
@@ -98,6 +104,7 @@ indexVenues()
         onIndexVenueSuccess(res.venues)
     })
     .catch(onVenueFailure)
+    // call on sign in success in ui
 
 
 createVenueForm.addEventListener('submit', (event) => {
@@ -193,13 +200,13 @@ const createShowForm = document.querySelector('#create-show-form')
 const indexShowContainer = document.querySelector('#index-show-container')
 const showShowContainer = document.querySelector('#show-show-container')
 
-indexShows()
-    .then(res => res.json())
-    .then(res => {
-        console.log(res)
-        onIndexShowSuccess(res.shows)
-    })
-    .catch(onShowFailure)
+// indexShows()
+//     .then(res => res.json())
+//     .then(res => {
+//         console.log(res)
+//         onIndexShowSuccess(res.shows)
+//     })
+//     .catch(onShowFailure)
 
 
 createShowForm.addEventListener('submit', (event) => {

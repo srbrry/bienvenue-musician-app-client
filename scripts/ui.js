@@ -2,6 +2,8 @@ import { store } from './store.js'
 
 // VENUES
 
+const mainPageContainer = document.querySelector('#main-page');
+const authContainer = document.querySelector('#auth-container');
 const indexVenueContainer = document.querySelector('#index-venue-container')
 const venueMessageContainer = document.querySelector('#venue-message-container')
 const showVenueContainer = document.querySelector('#show-venue-container')
@@ -16,12 +18,13 @@ export const onSignUpSuccess = () => {
 export const onSignInSuccess = (userToken) => {
     signInUpMessageContainer.innerHTML = ''
     store.userToken = userToken
-    authContainer.classList.add('hide')
-    indexContainer.classList.remove('hide') 
+    // authContainer.classList.add('hide')
+    authContainer.style.visibility = 'hidden'
+    mainPageContainer.style.visibility = 'visible'
 }
 
 export const onSignUpFailure = () => {
-    signInUpMessageContainer.innerHTML = 'You\'ve created a new user! Now Sign In'
+    signInUpMessageContainer.innerHTML = 'Youve created a new user! Now Sign In'
 }
 
 export const onSignInFailure = () => {
@@ -44,7 +47,7 @@ export const onIndexVenueSuccess = (venues) => {
 
 export const onVenueFailure = (error) => {
     venueMessageContainer.innerHTML = `
-        <h3>You've got an error! :(</h3>
+        <h3>You've got an error!</h3>
         <p>${error}</p>
     `
 }

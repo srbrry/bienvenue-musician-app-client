@@ -76,13 +76,13 @@ export const deleteVenue = (id) => {
 }
 
 // SHOW CRUD EXPORTS
-// export const indexShows = () => {
-//     return fetch(`http://localhost:8002/shows`, {
-// 		headers: {
-// 			Authorization: `Bearer ${store.userToken}`,
-// 		},
-// 	})
-// }
+export const indexShows = () => {
+    return fetch(`http://localhost:8002/shows`, {
+		headers: {
+			Authorization: `Bearer ${store.userToken}`,
+		},
+	})
+}
 
 export const createShow = (data) => {
     return fetch(`http://localhost:8002/shows`, {
@@ -96,13 +96,13 @@ export const createShow = (data) => {
     })
 }
 
-// export const showShow = (id) => {
-//     return fetch(`http://localhost:8002/shows/${id}`, {
-// 		headers: {
-// 			Authorization: `Bearer ${store.userToken}`,
-// 		},
-// 	})
-// }
+export const showShow = (id) => {
+    return fetch(`http://localhost:8002/shows/${id}`, {
+		headers: {
+			Authorization: `Bearer ${store.userToken}`,
+		},
+	})
+}
 
 export const updateShow = (data, id) => {
     return fetch(`http://localhost:8002/shows/${id}`, {
