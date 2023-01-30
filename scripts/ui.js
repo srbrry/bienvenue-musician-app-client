@@ -1,9 +1,34 @@
+import { store } from './store.js'
 
 // VENUES
 
 const indexVenueContainer = document.querySelector('#index-venue-container')
 const venueMessageContainer = document.querySelector('#venue-message-container')
 const showVenueContainer = document.querySelector('#show-venue-container')
+const signInUpMessageContainer = document.querySelector('#sign-in-up-message-container')
+
+// sign in and sign up
+
+export const onSignUpSuccess = () => {
+    signInUpMessageContainer.innerHTML = 'You\'ve created a new user! Now you can sign in.'
+}
+
+export const onSignInSuccess = (userToken) => {
+    signInUpMessageContainer.innerHTML = ''
+    store.userToken = userToken
+    authContainer.classList.add('hide')
+    indexContainer.classList.remove('hide') 
+}
+
+export const onSignUpFailure = () => {
+    signInUpMessageContainer.innerHTML = 'You\'ve created a new user! Now Sign In'
+}
+
+export const onSignInFailure = () => {
+    signInUpMessageContainer.innerHTML = 'Cannot sign in. Make sure your information is correct'
+}
+
+////
 
 export const onIndexVenueSuccess = (venues) => {
     venues.forEach(venue => {

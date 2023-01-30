@@ -70,40 +70,39 @@ export const deleteVenue = (id) => {
 	return fetch(`http://localhost:8002/venues/${id}`, {
 		method: 'DELETE',
 		headers: {
-			Authorization: `Bearer ${store.userToken}`,
+			'Authorization': `Bearer ${store.userToken}`,
 		},
 	})
 }
 
-// GIG CRUD EXPORTS
-export const indexShows = () => {
-    return fetch(`http://localhost:8002/shows`, {
-		headers: {
-			Authorization: `Bearer ${store.userToken}`,
-		},
-	})
-}
-
+// SHOW CRUD EXPORTS
+// export const indexShows = () => {
+//     return fetch(`http://localhost:8002/shows`, {
+// 		headers: {
+// 			Authorization: `Bearer ${store.userToken}`,
+// 		},
+// 	})
+// }
 
 export const createShow = (data) => {
     return fetch(`http://localhost:8002/shows`, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${store.userToken}`,
+			'Content-Type': 'application/json',
+			'Authorization': `Bearer ${store.userToken}`,
         },
         body: JSON.stringify(data)
     })
 }
 
-export const showShow = (id) => {
-    return fetch(`http://localhost:8002/shows/${id}`, {
-		headers: {
-			Authorization: `Bearer ${store.userToken}`,
-		},
-	})
-}
+// export const showShow = (id) => {
+//     return fetch(`http://localhost:8002/shows/${id}`, {
+// 		headers: {
+// 			Authorization: `Bearer ${store.userToken}`,
+// 		},
+// 	})
+// }
 
 export const updateShow = (data, id) => {
     return fetch(`http://localhost:8002/shows/${id}`, {
@@ -111,7 +110,7 @@ export const updateShow = (data, id) => {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${store.userToken}`,
+            'Authorization': `Bearer ${store.userToken}`,
         },
         body: JSON.stringify(data)
     })

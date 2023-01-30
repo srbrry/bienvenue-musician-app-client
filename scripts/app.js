@@ -9,9 +9,10 @@ import {
 	updateShow,
 	deleteVenue,
 	deleteShow,
+    signUp,
+    signIn,
 } from './api.js'
-
-
+import { store } from './store.js'
 import { 
 	onIndexVenueSuccess,
 	onIndexShowSuccess,
@@ -24,14 +25,71 @@ import {
 	onUpdateVenueSuccess,
 	onUpdateShowSuccess,
 	onDeleteVenueSuccess,
-	onDeleteShowSuccess
+	onDeleteShowSuccess,
+    onSignInSuccess,
+    onSignUpSuccess,
+    onSignInFailure,
+    onSignUpFailure,
 } from './ui.js'
 
 const createVenueForm = document.querySelector('#create-venue-form')
 const indexVenueContainer = document.querySelector('#index-venue-container')
 const showVenueContainer = document.querySelector('#show-venue-container')
 
+const browseVenuesButton = document.querySelector('#browse-venues')
+
+const signInContainer = document.querySelector('#sign-in-form-container')
+const signUpContainer = document.querySelector('#sign-up-form-container')
+
+// SIGN IN and UP button functionality
+
+signUpContainer.addEventListener('submit', (event) => {
+	event.preventDefault()
+	const userData = {
+		credentials: {
+			email: event.target['email'].value,
+			password: event.target['password'].value,
+		},
+	}
+	signUp(userData).then(onSignUpSuccess).catch(onSignUpFailure)
+})
+
+signInContainer.addEventListener('submit', (event) => {
+	event.preventDefault()
+	const userData = {
+		credentials: {
+			email: event.target['email'].value,
+			password: event.target['password'].value,
+		},
+	}
+	signIn(userData)
+		.then((res) => res.json())
+		.then((res) => onSignInSuccess(res.token))
+		.then(indexVenues)
+		.then((res) => res.json())
+		.then((res) => onIndexVenueSuccess(res.venues))
+		.then(indexShows)
+		.then((res) => res.json())
+		.then((res) => onIndexShowSuccess(res.shows))
+		.catch(onSignInFailure)
+})
+
+
 // VENUES
+
+// hide create venue form until you click the button
+
+// const makeVenueFormVisible = () => {
+//    createVenueForm.style.display("inline-block")
+// }
+
+// const clickAddVenue = () => {
+//     addVenueSelector.addEventListener('click', makeVenueFormVisible)
+// }
+
+// clickAddVenue()
+
+// show venues when clicking button
 
 indexVenues()
     .then(res => res.json())
@@ -44,8 +102,6 @@ indexVenues()
 
 createVenueForm.addEventListener('submit', (event) => {
     event.preventDefault()
-
-    console.log(event.target['typeOfShowsBooked'].value)
 
     const venueData = {
 			venue: {
@@ -69,7 +125,6 @@ createVenueForm.addEventListener('submit', (event) => {
 			},
 		}
 
-    // console.log(venueData)
     createVenue(venueData)
 			.then(onCreateVenueSuccess)
 			.catch(onVenueFailure)
@@ -117,7 +172,6 @@ showVenueContainer.addEventListener('submit', (event) => {
     if (!id) return
 
 	updateVenue(venueData, id)
-		// this function (onUpdateVenueSuccess) does not need anything to run. NO params
 		.then(onUpdateVenueSuccess)
 		.catch(onVenueFailure)
 })
@@ -155,6 +209,7 @@ createShowForm.addEventListener('submit', (event) => {
 			show: {
 				artist: event.target['artist'].value,
                 year: event.target['year'].value,
+                venueId: event.target['venueId'].value
 			},
 		}
 
@@ -185,6 +240,7 @@ showShowContainer.addEventListener('submit', (event) => {
 		show: {
             artist: event.target['gig'].value,
             year: event.target['year'].value,
+            venueId: event.target['venueId'].value
         },
 	}
 
