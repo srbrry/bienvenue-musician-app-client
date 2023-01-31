@@ -27,7 +27,8 @@
       crossorigin="anonymous"
     ></script>
     <main>
-      <h1>BienVenue</h1>
+      <h1 style="font-family: 'Barrio', cursive; font-size: 55px; margin: 70px auto 0px auto;
+      text-align: center;">BienVenue</h1>
       <h3 id="an-app-text">An App for Musicians</h3>
 
       <!--sign in and sign up-->
@@ -71,6 +72,7 @@
       <section>
         <div
           class="mask d-flex align-items-center h-100 gradient-custom-3"
+          style="width: 750px; height: 100px; margin: 70px auto 0px auto;"
           id="sign-up-modal"
         >
           <div class="container h-100">
@@ -80,7 +82,7 @@
               <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                 <div class="card" style="border-radius: 15px">
                   <div class="card-body p-5">
-                    <h2 class="text-uppercase text-center mb-5">
+                    <h2 class="text-uppercase text-center mb-5" style="font-size: 19px;">
                       Create an account
                     </h2>
 
@@ -91,6 +93,8 @@
                           id="form3Example3cg"
                           class="form-control form-control-lg"
                           placeholder="Email"
+                          name="email"
+                          style="font-size: 15px; margin: 10px auto 0px auto;"
                         />
                         <label class="form-label" for="form3Example3cg"></label>
                       </div>
@@ -101,6 +105,8 @@
                           id="form3Example4cg"
                           class="form-control form-control-lg"
                           placeholder="Password"
+                          name="password"
+                          style="font-size: 15px"
                         />
                         <label class="form-label" for="form3Example4cg"></label>
                       </div>
@@ -109,12 +115,14 @@
                         <button
                           type="submit"
                           class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
+                          id="sign-up-button"
+                          style="font-size: 15px; margin-top: 0px;"
                         >
                           Sign Up
                         </button>
                       </div>
 
-                      <div id="sign-up-message-container"></div>
+                      <div id="sign-up-message-container" style="font-size: 14px; color: black;"></div>
 
                       <button id="login-here-anchor">
                         Already have an account? Sign In
@@ -131,6 +139,7 @@
 
         <div
           class="mask d-flex align-items-center h-100 gradient-custom-3 d-none"
+          style="width: 750px; height: 100px; margin: 70px auto 0px auto;"
           id="login-modal"
         >
           <div class="container h-100">
@@ -140,7 +149,7 @@
               <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                 <div class="card" style="border-radius: 15px">
                   <div class="card-body p-5">
-                    <h2 class="text-uppercase text-center mb-5">Sign In</h2>
+                    <h2 class="text-uppercase text-center mb-5" style="font-size: 19px">Sign In</h2>
 
                     <form id="sign-in-form">
                       <div class="form-outline mb-4">
@@ -148,20 +157,26 @@
                           type="email"
                           id="form4Example4cg"
                           class="form-control form-control-lg"
+                          placeholder="Email"
+                          name="email"
+                          style="font-size: 15px"
                         />
                         <label class="form-label" for="form4Example4cg"
-                          >Email</label
+                          ></label
                         >
                       </div>
 
-                      <div class="form-outline mb-4">
+                      <div class="form-outline mb-4" style="margin-top: 0px;">
                         <input
                           type="password"
                           id="form4Example5cg"
                           class="form-control form-control-lg"
+                          placeholder="Password"
+                          name="password"
+                          style="font-size: 15px"
                         />
                         <label class="form-label" for="form4Example5cg"
-                          >Password</label
+                          ></label
                         >
                       </div>
 
@@ -169,12 +184,14 @@
                         <button
                           type="submit"
                           class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
+                          id="login-button"
+                          style="font-size: 14px;""
                         >
                           Login
                         </button>
                       </div>
 
-                      <div id="sign-in-message-container"></div>
+                      <div id="sign-in-message-container" style="font-size: 14px; color: black"></div>
                     </form>
                   </div>
                 </div>

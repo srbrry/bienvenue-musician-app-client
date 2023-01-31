@@ -50,6 +50,7 @@ signUpForm.addEventListener('submit', (event) => {
 	event.preventDefault()
     console.log("signUpForm")
     console.log(event.target)
+    console.log(event.target['email'])
 	const userData = {
 		credentials: {
 			email: event.target['email'].value,

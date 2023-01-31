@@ -14,7 +14,7 @@ const signUpMessageContainer = document.querySelector('#sign-up-message-containe
 // sign in and sign up
 
 export const onSignUpSuccess = () => {
-    signUpMessageContainer.innerHTML = 'You\'ve created a new user! Now you can sign in.'
+    signUpMessageContainer.innerHTML = 'You\'ve created a new user! Now you can sign in below.'
 }
 
 export const onSignInSuccess = (userToken) => {
