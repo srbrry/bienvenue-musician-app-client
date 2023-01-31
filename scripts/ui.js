@@ -3,32 +3,34 @@ import { store } from './store.js'
 // VENUES
 
 const mainPageContainer = document.querySelector('#main-page');
-const authContainer = document.querySelector('#auth-container');
+const signUpModal = document.querySelector('#sign-up-modal');
+const loginModal = document.querySelector('#login-modal');
 const indexVenueContainer = document.querySelector('#index-venue-container')
 const venueMessageContainer = document.querySelector('#venue-message-container')
 const showVenueContainer = document.querySelector('#show-venue-container')
-const signInUpMessageContainer = document.querySelector('#sign-in-up-message-container')
+const signInMessageContainer = document.querySelector('#sign-in-message-container')
+const signUpMessageContainer = document.querySelector('#sign-up-message-container')
 
 // sign in and sign up
 
 export const onSignUpSuccess = () => {
-    signInUpMessageContainer.innerHTML = 'You\'ve created a new user! Now you can sign in.'
+    signUpMessageContainer.innerHTML = 'You\'ve created a new user! Now you can sign in.'
 }
 
 export const onSignInSuccess = (userToken) => {
-    signInUpMessageContainer.innerHTML = ''
+    signInMessageContainer.innerHTML = ''
     store.userToken = userToken
-    // authContainer.classList.add('hide')
-    authContainer.style.visibility = 'hidden'
+    signUpModal.style.display = "none"
+    loginModal.style.display = "none"
     mainPageContainer.style.visibility = 'visible'
 }
 
 export const onSignUpFailure = () => {
-    signInUpMessageContainer.innerHTML = 'Youve created a new user! Now Sign In'
+    signUpMessageContainer.innerHTML = 'User created! You can sign in now.'
 }
 
 export const onSignInFailure = () => {
-    signInUpMessageContainer.innerHTML = 'Cannot sign in. Make sure your information is correct'
+    signInMessageContainer.innerHTML = 'Cannot sign in. Make sure your information is correct'
 }
 
 ////
@@ -93,11 +95,11 @@ export const onShowVenueSuccess = (venue) => {
 }
 
 export const onUpdateVenueSuccess = () => {
-    VenueMessageContainer.innerText = 'Update successful.)'
+    venueMessageContainer.innerText = 'Update successful.)'
 }
 
 export const onDeleteVenueSuccess = () => {
-    characterMessageContainer.innerText = 'The venue has been deleted.'
+    venueMessageContainer.innerText = 'The venue has been deleted.'
 }
 
 // SHOWS

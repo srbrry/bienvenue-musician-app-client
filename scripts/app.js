@@ -37,11 +37,14 @@ const indexVenueContainer = document.querySelector('#index-venue-container')
 const showVenueContainer = document.querySelector('#show-venue-container')
 
 const browseVenuesButton = document.querySelector('#browse-venues')
+const loginHere = document.querySelector('#login-here-anchor')
 
 const signInForm = document.querySelector('#sign-in-form')
 const signUpForm = document.querySelector('#sign-up-form')
+const signUpModal = document.querySelector('#sign-up-modal');
+const loginModal = document.querySelector('#login-modal');
 
-// SIGN IN and UP button functionality
+// SIGN IN and UP button and page functionality
 
 signUpForm.addEventListener('submit', (event) => {
 	event.preventDefault()
@@ -78,6 +81,14 @@ signInForm.addEventListener('submit', (event) => {
 		.then((res) => res.json())
 		.then((res) => onIndexShowSuccess(res.shows))
 		.catch(onSignInFailure)
+})
+
+// login anchor on sign up page
+
+loginHere.addEventListener('click', () => {
+    console.log(loginHere)
+    signUpModal.style.display = 'none'
+    loginModal.style.display = 'block'
 })
 
 
