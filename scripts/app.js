@@ -87,8 +87,8 @@ signInForm.addEventListener('submit', (event) => {
 
 loginHere.addEventListener('click', () => {
     console.log(loginHere)
-    signUpModal.style.display = 'none'
-    loginModal.style.display = 'block'
+    signUpModal.classList = 'mask d-flex align-items-center h-100 gradient-custom-3 d-none'
+    loginModal.classList = 'mask d-flex align-items-center h-100 gradient-custom-3'
 })
 
 

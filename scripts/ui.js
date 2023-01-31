@@ -20,9 +20,9 @@ export const onSignUpSuccess = () => {
 export const onSignInSuccess = (userToken) => {
     signInMessageContainer.innerHTML = ''
     store.userToken = userToken
-    signUpModal.style.display = "none"
-    loginModal.style.display = "none"
-    mainPageContainer.style.visibility = 'visible'
+    signUpModal.classList = 'mask d-flex align-items-center h-100 gradient-custom-3 d-none'
+    loginModal.classList = 'mask d-flex align-items-center h-100 gradient-custom-3 d-none'
+    mainPageContainer.classList.remove()
 }
 
 export const onSignUpFailure = () => {

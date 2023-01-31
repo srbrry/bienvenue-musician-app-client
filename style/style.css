@@ -1,5 +1,6 @@
 body {
-    background-color: white;
+    background-image: url("../images/caleb-george-pH88tHG-1yw-unsplash.jpg");
+    background-size: cover;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -9,6 +10,11 @@ h1 {
     font-family: 'Barrio', cursive;
     font-size: 55px;
     margin: 36px auto 0px auto;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
 }
 
 button {
@@ -19,15 +25,14 @@ input {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#main-page {
-    display: inline-block;
-    visibility: hidden;
-}
-
 #an-app-text {
     font-family: Avenir;
     font-size: 15px;
     font-weight: bold;
     margin-top: 0px;
     text-transform: uppercase;
+}
+
+#sign-up-modal, #login-modal {
+    margin-top: ;
 }
