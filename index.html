@@ -27,52 +27,24 @@
       crossorigin="anonymous"
     ></script>
     <main>
-      <h1 style="font-family: 'Barrio', cursive; font-size: 55px; margin: 70px auto 0px auto;
-      text-align: center;">BienVenue</h1>
+      <h1
+        style="
+          font-family: 'Barrio', cursive;
+          font-size: 55px;
+          margin: 70px auto 0px auto;
+          text-align: center;
+        "
+      >
+        BienVenue
+      </h1>
       <h3 id="an-app-text">An App for Musicians</h3>
-
-      <!--sign in and sign up-->
-      <!-- <div id="auth-container" class="container">
-    <div id="sign-in-up-message-container"></div>
-    <div class="row">
-        <div class="col">
-            <h2>Sign Up</h2> -->
-      <!-- <form id="sign-up-form">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
-                </div>
-                <div class="mb-3">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-                    <input type="password" class="form-control" id="inputPassword" name="password">
-                </div>
-                <button type="submit" class="btn btn-primary">Sign Up</button>
-            </form> -->
-      <!-- </div>
-        <div class="col">
-            <h2>Sign In</h2>
-            <form id="sign-in-form">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" placeholder="name@example.com"
-                        name="email">
-                </div>
-                <div class="mb-3">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-                    <input type="password" class="form-control" name="password">
-                </div>
-                <button type="submit" class="btn btn-primary">Sign In</button>
-            </form>
-        </div>
-    </div>
-</div> -->
 
       <!--BOOTSTRAP SIGN IN-->
 
       <section>
         <div
           class="mask d-flex align-items-center h-100 gradient-custom-3"
-          style="width: 750px; height: 100px; margin: 70px auto 0px auto;"
+          style="width: 750px; height: 100px; margin: 70px auto 0px auto"
           id="sign-up-modal"
         >
           <div class="container h-100">
@@ -82,7 +54,10 @@
               <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                 <div class="card" style="border-radius: 15px">
                   <div class="card-body p-5">
-                    <h2 class="text-uppercase text-center mb-5" style="font-size: 19px;">
+                    <h2
+                      class="text-uppercase text-center mb-5"
+                      style="font-size: 19px"
+                    >
                       Create an account
                     </h2>
 
@@ -94,7 +69,7 @@
                           class="form-control form-control-lg"
                           placeholder="Email"
                           name="email"
-                          style="font-size: 15px; margin: 10px auto 0px auto;"
+                          style="font-size: 15px; margin: 10px auto 0px auto"
                         />
                         <label class="form-label" for="form3Example3cg"></label>
                       </div>
@@ -116,18 +91,21 @@
                           type="submit"
                           class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
                           id="sign-up-button"
-                          style="font-size: 15px; margin-top: 0px;"
+                          style="font-size: 15px; margin-top: 0px"
                         >
                           Sign Up
                         </button>
                       </div>
-
-                      <div id="sign-up-message-container" style="font-size: 14px; color: black;"></div>
-
-                      <button id="login-here-anchor">
-                        Already have an account? Sign In
-                      </button>
                     </form>
+
+                    <div
+                      id="sign-up-message-container"
+                      style="font-size: 14px; color: black"
+                    ></div>
+
+                    <button id="login-here-anchor">
+                      Already have an account? Sign In
+                    </button>
                   </div>
                 </div>
               </div>
@@ -139,7 +117,7 @@
 
         <div
           class="mask d-flex align-items-center h-100 gradient-custom-3 d-none"
-          style="width: 750px; height: 100px; margin: 70px auto 0px auto;"
+          style="width: 750px; height: 100px; margin: 70px auto 0px auto"
           id="login-modal"
         >
           <div class="container h-100">
@@ -149,7 +127,12 @@
               <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                 <div class="card" style="border-radius: 15px">
                   <div class="card-body p-5">
-                    <h2 class="text-uppercase text-center mb-5" style="font-size: 19px">Sign In</h2>
+                    <h2
+                      class="text-uppercase text-center mb-5"
+                      style="font-size: 19px"
+                    >
+                      Sign In
+                    </h2>
 
                     <form id="sign-in-form">
                       <div class="form-outline mb-4">
@@ -161,12 +144,10 @@
                           name="email"
                           style="font-size: 15px"
                         />
-                        <label class="form-label" for="form4Example4cg"
-                          ></label
-                        >
+                        <label class="form-label" for="form4Example4cg"></label>
                       </div>
 
-                      <div class="form-outline mb-4" style="margin-top: 0px;">
+                      <div class="form-outline mb-4" style="margin-top: 0px">
                         <input
                           type="password"
                           id="form4Example5cg"
@@ -175,9 +156,7 @@
                           name="password"
                           style="font-size: 15px"
                         />
-                        <label class="form-label" for="form4Example5cg"
-                          ></label
-                        >
+                        <label class="form-label" for="form4Example5cg"></label>
                       </div>
 
                       <div class="d-flex justify-content-center">
@@ -185,14 +164,17 @@
                           type="submit"
                           class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
                           id="login-button"
-                          style="font-size: 14px;""
+                          style="font-size: 14px"
                         >
                           Login
                         </button>
                       </div>
-
-                      <div id="sign-in-message-container" style="font-size: 14px; color: black"></div>
                     </form>
+
+                    <div
+                      id="sign-in-message-container"
+                      style="font-size: 14px; color: black"
+                    ></div>
                   </div>
                 </div>
               </div>
@@ -205,52 +187,93 @@
 
       <!--main page containers-->
       <div class="d-none" id="main-page">
-        <div id="index-venue-container"></div>
-        <div id="show-venue-container"></div>
-        <div id="venue-message-container"></div>
-        <div id="index-show-container"></div>
-        <div id="show-show-container"></div>
-        <div id="show-message-container"></div>
-
-        <form id="create-venue-form">
-          <input type="text" name="name" placeholder="Venue Name" />
-          <input type="text" name="city" placeholder="City" />
+        <form id="create-venue-form" class="grid" style="border-radius: 10px;">
+          <input
+            type="text"
+            name="name"
+            placeholder="Venue Name"
+            class="g-col-6 g-col-md-4"
+          />
+          <input
+            type="text"
+            name="city"
+            placeholder="City"
+            class="g-col-6 g-col-md-4"
+          />
           <input
             type="text"
             name="state or province"
             placeholder="State or Province"
+            class="g-col-6 g-col-md-4"
           />
-          <input type="text" name="country" placeholder="Country" />
+          <input
+            type="text"
+            name="country"
+            placeholder="Country"
+            class="g-col-6 g-col-md-4"
+          />
           <input
             type="number"
             name="capacity"
             placeholder="Capacity (e.g. 150)"
+            class="g-col-6 g-col-md-4"
           />
           <input
             type="text"
-            name="type of show"
+            name="type of shows"
             placeholder="Preferred Genres"
+            class="g-col-6 g-col-md-4"
           />
           <input
             type="text"
             name="contact person"
             placeholder="Contact Person"
+            class="g-col-6 g-col-md-4"
           />
-          <input type="text" name="contact email" placeholder="Contact Email" />
-          <input type="text" name="instagram" placeholder="Instagram Link" />
-          <input type="text" name="twitter" placeholder="Twitter Link" />
-          <input type="text" name="facebook" placeholder="Facebook Link" />
-          <input id="add-venue-button" type="submit" value="Add Venue" />
+          <input
+            type="text"
+            name="contact email"
+            placeholder="Contact Email"
+            class="g-col-6 g-col-md-4"
+          />
+          <input
+            type="text"
+            name="instagram handle"
+            placeholder="Instagram Link"
+            class="g-col-6 g-col-md-4"
+          />
+          <input
+            type="text"
+            name="twitter handle"
+            placeholder="Twitter Link"
+            class="g-col-6 g-col-md-4"
+          />
+          <input
+            type="text"
+            name="facebook link"
+            placeholder="Facebook Link"
+            class="g-col-6 g-col-md-4"
+          />
+          <input
+            id="add-venue-button"
+            type="submit"
+            value="Add Venue"
+            class="g-col-6 g-col-md-4"
+            style="border-radius: 10px; background-color: rgb(255, 231, 235)"
+          />
         </form>
 
-        <button id="browse-venues">Browse Venues</button>
+        <button id="browse-venues" style="border-radius: 10px; margin: 10px auto 15px 700px; background-color: rgb(255, 231, 235)">Browse Venues</button>
 
-        <form id="create-show-form">
-          <input type="text" name="past gig" placeholder="Artist Name" />
-          <input type="number" name="year" placeholder="Year" />
-
-          <input id="add-gig" type="submit" value="Add Past Gig" />
-        </form>
+        <div id="index-venue-container" class="d-none">
+            
+        </div>
+        <div id="show-venue-container"></div>
+        <!--go back in and remove d-none from below. just temporary fix to make error invisible-->
+        <div id="venue-message-container" class="d-none"></div>
+        <div id="index-show-container"></div>
+        <div id="show-show-container"></div>
+        <div id="show-message-container"></div>
       </div>
     </main>
   </body>

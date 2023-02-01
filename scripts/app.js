@@ -1,6 +1,6 @@
 import { 
 	indexVenues, 
-	// indexShows,
+	indexShows,
 	createVenue,
 	createShow,
 	showVenue,
@@ -48,9 +48,6 @@ const loginModal = document.querySelector('#login-modal');
 
 signUpForm.addEventListener('submit', (event) => {
 	event.preventDefault()
-    console.log("signUpForm")
-    console.log(event.target)
-    console.log(event.target['email'])
 	const userData = {
 		credentials: {
 			email: event.target['email'].value,
@@ -64,8 +61,6 @@ signUpForm.addEventListener('submit', (event) => {
 
 signInForm.addEventListener('submit', (event) => {
 	event.preventDefault()
-    console.log("sign in form")
-    console.log(event.target)
 	const userData = {
 		credentials: {
 			email: event.target['email'].value,
@@ -87,36 +82,25 @@ signInForm.addEventListener('submit', (event) => {
 // login anchor on sign up page
 
 loginHere.addEventListener('click', () => {
-    console.log(loginHere)
     signUpModal.classList = 'mask d-flex align-items-center h-100 gradient-custom-3 d-none'
     loginModal.classList = 'mask d-flex align-items-center h-100 gradient-custom-3'
 })
 
-
 // VENUES
-
-// hide create venue form until you click the button
-
-// const makeVenueFormVisible = () => {
-//    createVenueForm.style.display("inline-block")
-// }
-
-// const clickAddVenue = () => {
-//     addVenueSelector.addEventListener('click', makeVenueFormVisible)
-// }
-
-// clickAddVenue()
-
-// show venues when clicking button
 
 indexVenues()
     .then(res => res.json())
     .then(res => {
-        console.log(res)
+        // console.log(res)
         onIndexVenueSuccess(res.venues)
     })
     .catch(onVenueFailure)
-    // call on sign in success in ui
+
+// browse venues button
+
+browseVenuesButton.addEventListener('click', () => {
+    indexVenueContainer.classList.remove('d-none')
+})
 
 
 createVenueForm.addEventListener('submit', (event) => {
@@ -131,13 +115,13 @@ createVenueForm.addEventListener('submit', (event) => {
                     country: event.target['country'].value,
                 },
 				capacity: event.target['capacity'].value,
-				typeOfShowsBooked: event.target['typeOfShowsBooked'].value,
+				typeOfShowsBooked: event.target['type of shows'].value,
                 contact: {
-                    name: event.target['contact name'].value,
+                    name: event.target['contact person'].value,
                     email: event.target['contact email'].value,
                     socialMediaLinks: {
-                        instagram: event.target['instagram link'].value,
-                        twitter: event.target['twitter link'].value,
+                        instagram: event.target['instagram handle'].value,
+                        twitter: event.target['twitter handle'].value,
                         facebook: event.target['facebook link'].value,
                     }
                 }
@@ -175,13 +159,13 @@ showVenueContainer.addEventListener('submit', (event) => {
                 country: event.target['country'].value,
             },
             capacity: event.target['capacity'].value,
-            typeOfShowsBooked: event.target['type of shows booked'].value,
+            typeOfShowsBooked: event.target['type of shows'].value,
             contact: {
-                name: event.target['contact name'].value,
+                name: event.target['contact person'].value,
                 email: event.target['contact email'].value,
                 socialMediaLinks: {
-                    instagram: event.target['instagram link'].value,
-                    twitter: event.target['twitter link'].value,
+                    instagram: event.target['instagram handle'].value,
+                    twitter: event.target['twitter handle'].value,
                     facebook: event.target['facebook link'].value,
                 }
             }
@@ -221,21 +205,40 @@ const showShowContainer = document.querySelector('#show-show-container')
 //     .catch(onShowFailure)
 
 
-createShowForm.addEventListener('submit', (event) => {
+// createShowForm.addEventListener('submit', (event) => {
+//     event.preventDefault()
+
+//     const showData = {
+// 			show: {
+// 				artist: event.target['past gig'].value,
+//                 year: event.target['year'].value,
+//                 venueId: event.target['venueId'].value
+// 			},
+// 		}
+
+//     // console.log(showData)
+//     createShow(showData)
+// 			.then(onCreateShowSuccess)
+// 			.catch(onShowFailure)
+// })
+
+showVenueContainer.addEventListener('submit', (event) => {
     event.preventDefault()
 
+if (event.target.classList.contains("create-show-form")) {
     const showData = {
-			show: {
-				artist: event.target['artist'].value,
+            show: {
+                artist: event.target['past gig'].value,
                 year: event.target['year'].value,
                 venueId: event.target['venueId'].value
-			},
-		}
+            },
+        }
 
     // console.log(showData)
     createShow(showData)
-			.then(onCreateShowSuccess)
-			.catch(onShowFailure)
+            .then(onCreateShowSuccess)
+            .catch(onShowFailure)
+}
 })
 
 indexShowContainer.addEventListener('click', (event) => {
@@ -257,7 +260,7 @@ showShowContainer.addEventListener('submit', (event) => {
 
 	const showData = {
 		show: {
-            artist: event.target['gig'].value,
+            artist: event.target['past gig'].value,
             year: event.target['year'].value,
             venueId: event.target['venueId'].value
         },
