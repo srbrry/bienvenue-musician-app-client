@@ -1,6 +1,8 @@
 import { indexVenues } from "./api.js";
 import { store } from "./store.js";
 
+// you can benefit from more comments in this file that break down each function, it's purpose, and any fine points of code that need extra explanation. it will help you reorient yourself to your code much quicker if you revisit it in the future. it also helps others who are looking at your code.
+
 // VENUES
 
 const mainPageContainer = document.querySelector("#main-page");
