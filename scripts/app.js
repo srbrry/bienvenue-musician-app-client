@@ -44,6 +44,8 @@ const signUpForm = document.querySelector('#sign-up-form')
 const signUpModal = document.querySelector('#sign-up-modal');
 const loginModal = document.querySelector('#login-modal');
 
+// you can benefit from more comments in this file that break down each function, it's purpose, and any fine points of code that need extra explanation. it will help you reorient yourself to your code much quicker if you revisit it in the future. it also helps others who are looking at your code.
+
 // SIGN IN and UP button and page functionality
 
 signUpForm.addEventListener('submit', (event) => {
@@ -135,6 +137,7 @@ createVenueForm.addEventListener('submit', (event) => {
 
 indexVenueContainer.addEventListener('click', (event) => {
     const id = event.target.getAttribute('data-id')
+	// take the console.logs out of the main production branch
     // console.log(id)
 
     if (!id) return
@@ -196,6 +199,8 @@ const createShowForm = document.querySelector('#create-show-form')
 const indexShowContainer = document.querySelector('#index-show-container')
 const showShowContainer = document.querySelector('#show-show-container')
 
+// non-working code should be on a development branch, not on the main production branch
+
 // indexShows()
 //     .then(res => res.json())
 //     .then(res => {
@@ -233,7 +238,7 @@ if (event.target.classList.contains("create-show-form")) {
                 venueId: event.target['venueId'].value
             },
         }
-
+	// bye bye to the console logs
     // console.log(showData)
     createShow(showData)
             .then(onCreateShowSuccess)
@@ -243,6 +248,7 @@ if (event.target.classList.contains("create-show-form")) {
 
 indexShowContainer.addEventListener('click', (event) => {
     const id = event.target.getAttribute('data-id')
+	// bye bye to this console.log as well
     // console.log(id)
 
     if (!id) return
