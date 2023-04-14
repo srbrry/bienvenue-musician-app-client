@@ -2,6 +2,8 @@
 
 BienVenue is an app that aims to solve a common problem that touring and gigging musicians have when booking their own shows: finding the best venues to perform at and accurate contact information for bookers at these venues. The app will build a database of music venues across the world, which users can constantly refer to when in search of reputable venues. BienVenue is meant to be a central hub for DIY musicians booking their own gigs.
 
+The app was born due to the fact that its creator, Sara Abdelbarry is a musician herself and has encountered all of these issues in her music career. 
+
 ## Screenshots
 
 ![Login Page](./images/BienVenue%20Login%20Page.jpg)
@@ -15,6 +17,12 @@ HTML, CSS, JavaScript, Bootstrap
 ## Getting Started
 
 Bienvenue! To use the app click [here](https://google.com)
+
+Here is the ideal use flow of the app: 
+1. Make an account
+2. Search for a venue by the location you are gigging in
+3. Read details about the venues in the location and decide which is best for you to reach out to
+4. Use the contact info for each venue to book your show and make your life so much easier, since the venue has been already vetted by plenty of musicians!
 
 ## Next Steps
 
@@ -32,7 +40,6 @@ Version 1.0
 - As a user I want to be blocked from updating or deleting a venue unless I created it.
 
 Version 2.0
-
 - As a user I want to be able to export the entire list of venues in a text file for easy access later.
 - As a user I want to be able to click the booker's contact information and contact them via the app.
 - As a user I want to be able to see the amount of times a venue has been viewed.
